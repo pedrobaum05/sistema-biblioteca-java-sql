@@ -4,9 +4,10 @@ public abstract class Usuario {
     private String nome;
     private int quantidadeEmprestada;
 
-    public Usuario(String nome, int quantidadeEmprestada) {
+    public Usuario(String nome) {
         this.nome = nome;
-        this.quantidadeEmprestada = quantidadeEmprestada;
+        this.quantidadeEmprestada = 0;
+
     }
 
     public abstract int limiteItens();
@@ -15,6 +16,7 @@ public abstract class Usuario {
         return nome;
     }
 
+    //Virou atributo privado o get está lendo quantidadeEmprestada
     public int getQuantidadeEmprestada() {
         return quantidadeEmprestada;
     }
