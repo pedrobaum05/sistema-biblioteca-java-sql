@@ -3,11 +3,11 @@ package biblioteca;
 //public qualquer classe pode chamar esse metodo
 //abastract serve para que  outras classes herdem dela.  ex cachorro e gato herdam da clase Animal
 
- public abstract class ItemBiblioteca {
+public abstract class ItemBiblioteca {
     //atributos
-     private int codigo;
-     private String titulo;
-     private boolean disponivel;
+    private int codigo;
+    private String titulo;
+    private boolean disponivel;
 
     public ItemBiblioteca(int codigo, String titulo) {
         this.codigo = codigo;
@@ -36,5 +36,5 @@ package biblioteca;
         this.disponivel = disponivel;
     }
 
- }
+}
 

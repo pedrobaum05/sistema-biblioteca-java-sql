@@ -13,14 +13,14 @@ public class Livro extends ItemBiblioteca {
     //substitui ou subscreve um metodo que existe na classe mae
     @Override
     public int prazo() {
-    int prazo = 14;
+        int prazo = 14;
         return prazo;
     }
 
     @Override
     public double multa() {
         double multa = 0.50;
-            return multa;
+        return multa;
     }
 }
 
