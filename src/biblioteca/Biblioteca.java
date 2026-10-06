@@ -8,7 +8,7 @@ public class Biblioteca {
     private int quantidadeItens;
     private int quantidadeUsuarios;
 
-//Biblioteca nova começa sem nenhum item e nome cadastrado pois é NOVA
+    //Biblioteca nova começa sem nenhum item e nome cadastrado pois é NOVA
     public Biblioteca() {
         quantidadeItens = 0;
         quantidadeUsuarios = 0;
@@ -18,7 +18,7 @@ public class Biblioteca {
     //For percorre varias posicoes chamando os metodos
     public void listarAcervo() {
         for (int i = 0; i < quantidadeItens; i++) {
-            System.out.println("Código: " + itens[i].getCodigo() + "Título: " + itens[i].getTitulo() + "Disponível: " + itens[i].isDisponivel());
+            System.out.println("Código: " + itens[i].getCodigo() + " | Título: " + itens[i].getTitulo() + " | Disponível: " + itens[i].isDisponivel());
 
         }
     }
@@ -53,9 +53,9 @@ public class Biblioteca {
         System.out.println("Empréstimo realizado com sucesso.");
     }
 
-        //Libera o item e diminui a quantidade de itens que cada um item
+    //Libera o item e diminui a quantidade de itens que cada um item
     public void devolver(ItemBiblioteca item, Usuario usuario) {
-        item.definirDisponivel (true);
+        item.definirDisponivel(true);
         usuario.devolverItem();
     }
 }

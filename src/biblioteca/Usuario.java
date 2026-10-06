@@ -5,16 +5,17 @@ public abstract class Usuario {
     private String nome;
     private int quantidadeEmprestada;
 
-//Todo usuario novo começa sem nenhum item emprestado  pois o usuario é NOVO
+    //Todo usuario novo começa sem nenhum item emprestado  pois o usuario é NOVO
     public Usuario(String nome) {
         this.nome = nome;
         this.quantidadeEmprestada = 0;
 
     }
-//Cada subclasse do Aluno e Professor definem seu proprio limite de itens
+
+    //Cada subclasse do Aluno e Professor definem seu proprio limite de itens
     public abstract int limiteItens();
 
-//Getter permite ler o nome fora da classe
+    //Getter permite ler o nome fora da classe
     public String getNome() {
         return nome;
     }

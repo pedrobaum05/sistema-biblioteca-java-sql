@@ -21,19 +21,19 @@ public abstract class ItemBiblioteca {
     public abstract double multa();
 
     public int getCodigo() {
-        return codigo;
+        return codigo ;
     }
 
     public String getTitulo() {
-        return titulo;
+        return titulo ;
     }
 
     public boolean isDisponivel() {
-        return disponivel;
+        return disponivel ;
     }
 
     void definirDisponivel(boolean disponivel) {
-        this.disponivel = disponivel;
+        this.disponivel = disponivel ;
     }
 
 }
