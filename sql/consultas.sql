@@ -1,17 +1,19 @@
-SELECT
+    SELECT
         codigo,
         titulo,
         tipo,
         disponivel
- FROM item ;
+
+    FROM item ;
 
  -----------------------------------------------------------------------------------------------------------------------
 
     SELECT usuario.nome, item.titulo
-    FROM emprestimo
 
-    JOIN usuario ON emprestimo.usuario_id = usuario.id
-    JOIN item    ON emprestimo.item_id = item.id
+        FROM emprestimo
+
+        JOIN usuario ON emprestimo.usuario_id = usuario.id
+        JOIN item    ON emprestimo.item_id = item.id
 
     WHERE emprestimo.data_devolucao IS NULL;
 
@@ -19,8 +21,16 @@ SELECT
 
      SELECT usuario.nome, SUM(emprestimo.valor_multa)
 
-     FROM emprestimo
-     JOIN  usuario ON emprestimo.usuario_id = usuario.id
+        FROM emprestimo
+        JOIN  usuario ON emprestimo.usuario_id = usuario.id
 
      GROUP BY usuario.nome;
 
+------------------------------------------------------------------------------------------------------------------------
+
+    SELECT item.codigo, item.titulo
+
+        FROM item
+        LEFT JOIN emprestimo ON emprestimo.item_id = item.id
+
+    WHERE emprestimo.id IS NULL;
