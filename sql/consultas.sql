@@ -5,7 +5,7 @@ SELECT
         disponivel
  FROM item ;
 
-
+ -----------------------------------------------------------------------------------------------------------------------
 
     SELECT usuario.nome, item.titulo
     FROM emprestimo
@@ -15,5 +15,12 @@ SELECT
 
     WHERE emprestimo.data_devolucao IS NULL;
 
-    SELECT
-    FROM usuario
+------------------------------------------------------------------------------------------------------------------------
+
+     SELECT usuario.nome, SUM(emprestimo.valor_multa)
+
+     FROM emprestimo
+     JOIN  usuario ON emprestimo.usuario_id = usuario.id
+
+     GROUP BY usuario.nome;
+
